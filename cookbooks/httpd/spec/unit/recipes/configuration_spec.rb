@@ -16,5 +16,9 @@ describe 'httpd::configuration' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
+
+    it "create the needed file" do
+      expect(chef_run).to create_file("/var/www/html/index.html")
+    end
   end
 end
