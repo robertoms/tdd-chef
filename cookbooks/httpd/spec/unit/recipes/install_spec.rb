@@ -18,7 +18,7 @@ describe 'httpd::install' do
     end
 
     it 'install the necessary package' do
-      expect(chef_run).to install_package('httpd')
+      expect(chef_run).to install_package( 'httpd' )
     end
 
 
